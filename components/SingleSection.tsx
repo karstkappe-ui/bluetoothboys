@@ -34,7 +34,7 @@ export default function SingleSection() {
           <AnimateIn>
             <div className="relative aspect-square w-full max-w-sm mx-auto md:mx-0 overflow-hidden">
               <Image
-                src="/single-cover.jpg"
+                src="/single-cover.jpg.png"
                 alt="bluetoothboys — Ready to Pair single cover"
                 fill
                 className="object-cover"
