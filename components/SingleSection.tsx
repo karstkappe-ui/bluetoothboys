@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import AnimateIn from './AnimateIn';
-import BluetoothIcon from './BluetoothIcon';
 
 const streamingLinks = [
   { label: 'Spotify', href: '#' },
@@ -30,42 +30,17 @@ export default function SingleSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Left: Single artwork placeholder */}
+          {/* Left: Single artwork */}
           <AnimateIn>
-            <div
-              className="relative aspect-square w-full max-w-sm mx-auto md:mx-0 border border-[#1e1e1e] overflow-hidden"
-              style={{ background: '#0a0a0a' }}
-            >
-              {/* Grid pattern */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(rgba(0,163,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,163,255,0.04) 1px, transparent 1px)',
-                  backgroundSize: '32px 32px',
-                }}
+            <div className="relative aspect-square w-full max-w-sm mx-auto md:mx-0 overflow-hidden">
+              <Image
+                src="/single-cover.jpg"
+                alt="bluetoothboys — Ready to Pair single cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 384px"
+                priority
               />
-              {/* Center Bluetooth icon */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="w-20 h-20 text-[#00A3FF] opacity-40">
-                  <BluetoothIcon />
-                </div>
-                <div
-                  className="display-font text-[#00A3FF] opacity-30 text-center leading-tight"
-                  style={{ fontSize: 'clamp(1.4rem, 4vw, 2.5rem)', letterSpacing: '0.05em' }}
-                >
-                  READY<br />TO PAIR
-                </div>
-              </div>
-              {/* Corner accent */}
-              <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[#00A3FF]/50" />
-              <div className="absolute top-3 right-3 w-6 h-6 border-t border-r border-[#00A3FF]/50" />
-              <div className="absolute bottom-3 left-3 w-6 h-6 border-b border-l border-[#00A3FF]/50" />
-              <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[#00A3FF]/50" />
-              {/* SINGLE tag */}
-              <div className="absolute top-4 left-1/2 -translate-x-1/2 px-3 py-1 border border-[#00A3FF]/30 text-[0.55rem] uppercase tracking-[0.4em] text-[#00A3FF]/60">
-                Debut Single
-              </div>
             </div>
           </AnimateIn>
 
